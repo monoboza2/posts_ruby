@@ -1,0 +1,12 @@
+version: '3.1'
+
+services:
+  db:
+    image: postgres:14
+    restart: always
+    environment:
+      POSTGRES_USER: psql2
+      POSTGRES_PASSWORD: psql2
+      POSTGRES_DB: psql2
+    ports:
+      - 5432:5432
