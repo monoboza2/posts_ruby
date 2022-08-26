@@ -24,16 +24,16 @@ default: &default
 development:
   <<: *default
   database: simple_blog2_development
-  username: psql
-  password: psql
+  username: psql2
+  password: psql2
   host: localhost
   port: 5432
 
 test:
   <<: *default
   database: simple_blog2_test
-  username: psql
-  password: psql
+  username: psql2
+  password: psql2
   host: localhost
   port: 5432
 
