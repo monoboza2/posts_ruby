@@ -20,6 +20,10 @@
     <%= form.label :body, style: "display: block" %>
     <%= form.text_area :body %>
   </div>
+  <div>
+  Author
+  <%= form.collection_select :authors_id, Author.order(:name),:id,:name%>
+  </div>
 
   <div>
     <%= form.label :published, style: "display: block" %>
