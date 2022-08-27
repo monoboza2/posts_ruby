@@ -5,11 +5,13 @@
 <div id="posts">
   <% @posts.each do |post| %>
     <%= render post %>
+    <%= @authors.find(post.authors_id).name %>
     <p>
       <%= link_to "Show this post", post %>
     </p>
   <% end %>
 </div>
 
+
+
 <%= link_to "New post", new_post_path %>
-<%= link_to "Home" ,root_path%>
