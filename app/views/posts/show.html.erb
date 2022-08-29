@@ -1,7 +1,21 @@
+<style>
+table, th, td {
+  border: 1px solid;
+}
+</style>
 <p style="color: green"><%= notice %></p>
 
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Body</th>
+      <th>Published</th>
+      <th>Author</th>
+    </tr>
+  </thead>
 <%= render @post %>
-
+</table>
 <div>
   <%= link_to "Edit this post", edit_post_path(@post) %> |
   <%= link_to "Back to posts", posts_path %>

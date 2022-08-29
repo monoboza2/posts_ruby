@@ -1,14 +1,28 @@
+<style>
+table, th, td {
+  border: 1px solid;
+}
+</style>
 <p style="color: green"><%= notice %></p>
 
 <%= render @author %>
 <div id="authors">
+  <table>
+      <thead>
+        <th>Post Title</th>
+        <th>Edit</th>
+      </thead>
   <% @posts_list.each do |p| %>
   <%if @authors.id == p.authors_id%>
-    <%= p.title %>
-    <%=link_to "Edit", edit_post_path(p.id) %>
+      <tbody>
+        <tr>
+          <td><%= p.title %></td>
+          <td><%=link_to "Edit", edit_post_path(p.id) %></td>
+        </tr>
+      </tbody>
     <%end%>
   <% end %>
-
+  </table>
 </div>
 
 <div>
