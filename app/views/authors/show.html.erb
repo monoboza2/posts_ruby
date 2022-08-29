@@ -2,14 +2,13 @@
 
 <%= render @author %>
 <div id="authors">
-  <% @authors.each do |author| %>
-    <p>
-     <%= @posts.find(author.id).title %>
-    </p>
-    <p>
-    <%= link_to "Edit", edit_post_path(@posts.ids) %> |
-    </p> 
+  <% @posts_list.each do |p| %>
+  <%if @authors.id == p.authors_id%>
+    <%= p.title %>
+    <%=link_to "Edit", edit_post_path(p.id) %>
+    <%end%>
   <% end %>
+
 </div>
 
 <div>
