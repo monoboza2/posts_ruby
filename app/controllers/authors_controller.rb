@@ -9,9 +9,18 @@ class AuthorsController < ApplicationController
 
   # GET /authors/1 or /authors/1.json
   def show
-    @authors = Author.all
-    @posts = Post.all
-    
+    @authors = Author.find(params[:id])
+    @posts = Post.find(@authors.id)
+    @authors_list=Author.all
+    @posts_list=Post.all
+  
+    # @posts_list.each do |p|
+    #   if @authors == p.authors_id
+    #     return p.title
+    #   else
+    #     return 0
+    #   end
+    # end
   end
 
   # GET /authors/new
