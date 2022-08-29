@@ -10,6 +10,8 @@ class PostsController < ApplicationController
 
   # GET /posts/1 or /posts/1.json
   def show
+    @posts = Post.all
+    @authors = Author.all
   end
 
   # GET /posts/new
@@ -20,6 +22,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    # @posts = Post.all
   end
 
   # POST /posts or /posts.json
