@@ -1,20 +1,17 @@
 <div id="<%= dom_id post %>">
-  <p>
-    <strong>Title:</strong>
+  <td>
     <%= post.title %>
-  </p>
+  </td>
 
-  <p>
-    <strong>Body:</strong>
+  <td>
     <%= post.body %>
-  </p>
+  </td>
 
-  <p>
-    <strong>Published:</strong>
+  <td>
     <%= post.published %>
-  </p>
-
-
-
+  </td>
+  <td>
+    <%= @authors.find(post.authors_id).name %>
+  </td>
 
 </div>
