@@ -9,6 +9,7 @@ class CreateAuthors < ActiveRecord::Migration[7.0]
       t.belongs_to :author, foreign_key: true
       t.string :title
       t.text :body
+      t.string :filename
       t.boolean :published
 
       t.timestamps
