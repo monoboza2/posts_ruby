@@ -20,6 +20,9 @@
     <%= form.label :body, style: "display: block" %>
     <%= form.text_area :body ,:required=>true%>
   </div>
+    <% if @post.filename.persisted? %>
+                  <%= image_tag @post.filename, size: '100x100'%>
+    <%end%>
   <div>
     <%= form.label :Upload_photo, style: "display: block" %>
     <%= form.file_field :filename%>
