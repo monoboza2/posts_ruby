@@ -10,10 +10,8 @@ class AuthorsController < ApplicationController
   # GET /authors/1 or /authors/1.json
   def show
     @authors = Author.find(params[:id])
-    @posts = Post.find(@authors.id)
-    @authors_list=Author.all
-    @posts_list=Post.all
-  
+    # @posts = Post.find(@authors.id)
+    @author_list2 = @authors.posts.all
     # @posts_list.each do |p|
     #   if @authors == p.authors_id
     #     return p.title

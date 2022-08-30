@@ -18,11 +18,11 @@
 
   <div>
     <%= form.label :body, style: "display: block" %>
-    <%= form.text_area :body %>
+    <%= form.text_area :body,:required => true%>
   </div>
   <div>
   Author
-  <%= form.collection_select :authors_id, Author.order(:name),:id,:name%>
+  <%= form.collection_select :author_id, Author.order(:name),:id,:name%>
   </div>
 
   <div>
