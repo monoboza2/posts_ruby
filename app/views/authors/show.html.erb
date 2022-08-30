@@ -13,7 +13,7 @@ table, th, td {
         <th>Edit</th>
       </thead>
   <% @posts_list.each do |p| %>
-  <%if @authors.id == p.authors_id%>
+  <%if @authors.id == p.author_id%>
       <tbody>
         <tr>
           <td><%= p.title %></td>
