@@ -12,15 +12,13 @@ table, th, td {
         <th>Post Title</th>
         <th>Edit</th>
       </thead>
-  <% @posts_list.each do |p| %>
-  <%if @authors.id == p.author_id%>
+  <% @author_list2.each do |a| %>
       <tbody>
         <tr>
-          <td><%= p.title %></td>
-          <td><%=link_to "Edit", edit_post_path(p.id) %></td>
+          <td><%= a.title %></td>
+          <td><%=link_to "Edit", edit_post_path(a.id) %></td>
         </tr>
       </tbody>
-    <%end%>
   <% end %>
   </table>
 </div>
